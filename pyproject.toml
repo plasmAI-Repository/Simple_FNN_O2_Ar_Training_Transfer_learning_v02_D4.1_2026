@@ -1,0 +1,26 @@
+[project]
+name = "plasmai-mlp-transfer"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "tatiana-boura",email = "tat.boura@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.poetry.dependencies]
+matplotlib = ">=3.10.1,<4.0.0"
+torch = { version = "^2.5.1+cu121", source = "pytorch" }
+torchvision = { version = "^0.20.1+cu121", source = "pytorch" }
+scikit-learn = "^1.6.1"
+pandas = "^2.2.3"
+seaborn = "^0.13.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
